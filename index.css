@@ -1,6 +1,6 @@
 
 /* 모바일*/
-@media ( max-width: 500px ) {
+@media ( max-width: 400px ) {
 
     *{
         margin:0;
@@ -15,37 +15,45 @@
     .clock h1{ 
         position: absolute;
         top:5px; 
-        right: 5px;
+        right:5px;
         font-size:20px; 
         color:white; 
     }
 
+
+
+    input::placeholder{
+        color:black;
+    }
+
     .form input{
         position: absolute;
-        width:230px;
-        height:35px;
-        background-color:transparent;
-        color:white;
         top:60px;
         margin-left: calc(50% - 115px);
+        width:230px;
+        height:35px;
         border: 0;
         outline: 0;
-        border-bottom:2px solid;  
+        border-bottom:2px solid; 
+        padding:0 5px;
+        background-color:transparent;
+        color:black;
         z-index:1;
     }
 
 
 
     .toDoForm input{
-        background-color:transparent;
-        color:white;
-        width:200px;
-        height:35px;
         margin-left: calc(50% - 100px);
         margin-top:70px;
+        width:200px;
+        height:35px;
         border: 0;
         outline: 0;
+        padding:0 5px;
         border-bottom:2px solid;  
+        background-color:transparent;
+        color:black;
     }
 
 
@@ -70,7 +78,14 @@
         display: none;
     }
     
-
+    .weather{
+        position: absolute;
+        top:55px;
+        right:5px;
+        color: black;
+        font-weight: bold; 
+        z-index:2;
+    }
    
     
     .showing{
@@ -81,8 +96,8 @@
     .toDoListDiv{
         position: absolute;
         background-color:white; 
-        width:100%;
-        height: 100%;
+        width:calc(100% - 20px);
+        height:calc(100% - 20px);
         top:40px;
         margin:0 auto;
         padding:10px; 
@@ -121,7 +136,7 @@
 
 
 /* PC */
-@media ( min-width: 501px ) {
+@media ( min-width: 401px ) {
     *{
         margin:0;
         padding:0;
@@ -140,46 +155,41 @@
         margin:0 auto;
         margin-top:100px;
         text-align: center;
-        font-size:120px; 
+        font-size:120px;
         transition: color .5s ease-in-out;
     }
-     
-    
-    #btn{
-        width:100px;
-        height:25px; 
-        margin-left: 46%;
-        margin-top:30px;
+ 
+    input::placeholder{
+        color:white;
     }
-    
-   
 
     .form input{
-        background-color:transparent;
-        color:white;
+        margin-top:130px;
+        margin-left: calc(50% - 150px); 
         width: 300px; 
         height: 30px;
-        margin-top:130px; 
         border: 0;
         outline: 0;
+        padding:0 7px;
         border-bottom:3px solid;
-        margin-left: calc(50% - 150px);
+        background-color:transparent;
+        color:white;
     }
 
 
 
     .toDoForm input{
-        background-color:transparent;
-        color:white;
+        margin-top:20px;
+        margin-left: calc(50% - 125px);
         width: 250px; 
         height: 30px; 
-        margin-top:20px;
         border: 0;
         outline: 0;
+        padding:0 7px;
         border-bottom:3px solid;
-        margin-left: calc(50% - 125px); 
+        background-color:transparent;
+        color:white;
     }
-
 
 
     .clicked{
@@ -203,9 +213,9 @@
 
     
     .toDoListDiv{  
-        width:300px;
         margin:0 auto;
         margin-top:10px;
+        width:300px;
         padding:10px; 
     }
       
@@ -230,6 +240,8 @@
         position: absolute;
         top:10px;
         right: 10px;
+        color: white;
+        font-weight: bold;
     }
     
     @keyframes fadeIn{
