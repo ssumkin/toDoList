@@ -6,7 +6,7 @@ const IMG_NUMBER = 4;
 
 function open_chatroom(randomNumber){
     var windowWidth = window.innerWidth;
-    if(windowWidth > 400) {
+    if(windowWidth > 500) {
         paintImage(randomNumber);
     }
 }
