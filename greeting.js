@@ -54,8 +54,7 @@ function localName(){ //유저 존재 유무 확인
 
 
 function init(){ //처음 작동 함수 
-    localName();
-    alert(window.innerWidth);
+    localName(); 
 }
 
 init();

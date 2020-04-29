@@ -97,7 +97,7 @@
         position: absolute;
         background-color:white; 
         width:calc(100% - 20px);
-        height:calc(100% - 20px);
+        height:calc(100% - 60px);
         top:40px;
         margin:0 auto;
         padding:10px; 
