@@ -18,7 +18,7 @@
     #nameForm{
         position: absolute;
         top:60px;
-        width:100%;
+        width:calc(100% - 20px);
         height: calc(100% - 60px);
         background-color: white;
         display:none;
@@ -138,6 +138,7 @@
 
 
     .toDoListDiv ul li { 
+        border:1px 0px;
     }
 
 
