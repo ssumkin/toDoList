@@ -2,7 +2,7 @@ const form = document.querySelector(".js-form"),
 input = form.querySelector("input"),
 greeting = document.querySelector(".js-greeting");
 
-
+const name = document.getElementById("nameForm");
 
 const USER_LS = "currentUser",
 SHOWING_CN = "showing";
@@ -17,6 +17,7 @@ function saveName(text){
 function handleSubmit(event){
     event.preventDefault();
     const currentInputValue = input.value;
+    name.style.display = "none";
     paintGreeting(currentInputValue);
     saveName(currentInputValue);
 }
@@ -45,6 +46,8 @@ function localName(){ //유저 존재 유무 확인
 
     if(currentUser === null){ //유저가 없을 때
         askForName();
+        name.style.display = "block";
+        name.style.zIndex = 10;
     } else{ //유저가 존재 할 때 
         paintGreeting(currentUser);
     }

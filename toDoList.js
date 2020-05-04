@@ -11,6 +11,13 @@ let toDos  = [];
  
 
 
+function changePage(){
+    onclick="location.href='details.html'"
+}
+
+
+
+
 function deleteToDo(event){
     const btn = event.target;
     const li = btn.parentNode;
@@ -27,9 +34,7 @@ function deleteToDo(event){
 function saveToDos(){
     localStorage.setItem(TODOS_LS, JSON.stringify(toDos)); //JSON.stringify()는 object를 string형으로 바꿔줌
 }
-
-
-
+ 
 
 function paintToDo(text){ // li, 버튼, span을 만들고 span에 form에서 입력받은 값을 넣음 list 형태로 보여주고 그걸 오브젝트 형태로 만들어서 toDos 배열에 넣음 
     const li = document.createElement("li");
@@ -37,7 +42,7 @@ function paintToDo(text){ // li, 버튼, span을 만들고 span에 form에서 �
     const span = document.createElement("span");
     const newID = toDos.length+1;
 
-    delBtn.innerText = "❌"
+    delBtn.innerText = "✅"
     delBtn.addEventListener("click", deleteToDo);
     //delBtn.id = newID;
     span.innerText = ` ${text}`;
