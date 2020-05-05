@@ -46,7 +46,7 @@
 
 
     input::placeholder{
-        color:black;
+        color:rgb(114, 111, 111);
     }
 
     .form input{
@@ -59,10 +59,18 @@
         border-radius: 10px;
         outline: 0; 
         padding:0 5px;
-        background-color:transparent;
+        background-color:rgb(221, 220, 220);
         color:black;
         z-index:1;
     }
+
+
+    .form input:focus{
+        background-color: white;
+    }
+
+
+
 
     #writeToDo{
         display:none;
@@ -87,16 +95,16 @@
     }
 
 
-    .toDoForm input{
-        margin-left: calc(50% - 125px); 
+    .toDoForm input{ 
+        margin-left:10px;
         margin-top:15px;
-        margin-bottom:15px;
-        width:250px;
-        height:40px;
+        margin-bottom:15px; 
+        width: calc(100% - 40px);
+        height: 50px;
+        font-size: 15px;
         border: 0;
         outline: 0;
-        padding:0 5px;
-        border-bottom:2px solid;  
+        padding:0 5px; 
         background-color:transparent;
         color:black;
     }
@@ -218,8 +226,8 @@
     
 
     .js-toDoList button{
-        width:17px;
-        height:17px;   
+        width:20px;
+        height:20px;   
         border-radius: 50%;
         border:1.3px solid rgb(161, 153, 153);
         background-color: white;
