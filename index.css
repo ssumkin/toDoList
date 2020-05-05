@@ -14,6 +14,19 @@
 
 
 
+    .user{
+        margin-left:-500px;
+        position: absolute;
+        top:0;
+        width:80%;
+        height:100%;
+        background-color: rgb(165, 30, 30); 
+        z-index: 21;
+    }
+    .user h3{
+        z-index: 21;
+    }
+
 
     #nameForm{
         position: absolute;
@@ -60,8 +73,7 @@
         outline: 0; 
         padding:0 5px;
         background-color:rgb(221, 220, 220);
-        color:black;
-        z-index:1;
+        color:black; 
     }
 
 
@@ -101,7 +113,7 @@
         margin-bottom:15px; 
         width: calc(100% - 40px);
         height: 50px;
-        font-size: 15px;
+        font-size: 17px;
         border: 0;
         outline: 0;
         padding:0 5px; 
