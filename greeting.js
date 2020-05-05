@@ -36,7 +36,7 @@ function askForName(){ //유저가 없을 때 이름 물어보는 함수
 function paintGreeting(text){ //유저가 있을 때 class를 추가해서 보이게 하고 인사함
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
-    greeting.innerText = `Hello ${text}`;
+    greeting.innerText = `${text}`;
 }
 
 
