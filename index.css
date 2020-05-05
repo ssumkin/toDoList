@@ -9,7 +9,7 @@
 
 
     body{
-        background-color:#2c3e50;
+        background-color:#e44332;
     }
 
 
@@ -116,16 +116,44 @@
 
     .toDoListDiv{
         position: absolute;
-        background-color:white; 
+        top:50px;
         width:100%;
-        height:calc(100% - 40px);
-        top:40px;
+        height:calc(100% - 50px);
         margin:0 auto; 
         overflow-y: scroll;
+        background-color:white; 
     }
      
 
-    
+    .writing{
+        position: fixed;
+        right: 30px;
+        bottom:55px;
+        width:40px;
+        height: 40px;
+        font-size:40px;
+        line-height: 10px;
+        background-color: #e44332;
+        color:white;
+        border: 0.5px solid #e73825;
+        border-radius: 50%;
+        outline:none;
+    }
+
+    .writing:active{
+        position: fixed;
+        right:35px;
+        bottom:60px;
+        width:30px;
+        height: 30px;
+        font-size:30px;
+        line-height: 10px;
+        background-color: white;
+        color:#e44332;
+        border: 0.5px solid #e73825;
+        border-radius: 50%;
+        outline:none;
+    }
  
     
     .toDoListDiv ul{
@@ -194,7 +222,7 @@
 
 
     body{
-        background-color:#2c3e50;
+        background-color:#e44332;
         color:white;
     } 
     
