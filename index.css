@@ -64,8 +64,6 @@
         z-index:1;
     }
 
-
-
     #writeToDo{
         display:none;
         position: absolute;
@@ -76,6 +74,14 @@
         z-index:20;
     }
 
+
+    .blind{
+        display:none;
+        position: fixed; 
+        width:100%;
+        height:calc(100% - 50px); 
+        z-index:19;
+    }
 
 
     .toDoForm input{

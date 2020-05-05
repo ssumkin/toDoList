@@ -63,6 +63,7 @@ function handleSubmit(event){ // form에 입력하면 paintToDo를 실행하고 
         paintToDo(currentInputValue);
         toDoInput.value="";
         document.querySelector("#writeToDo").style.display = "none";
+        document.querySelector(".blind").style.display = "none";
     } 
     
 }
