@@ -29,7 +29,7 @@
 
     .clock h1{ 
         position: absolute;
-        top:5px; 
+        top:10px; 
         right:5px;
         font-size:20px; 
         color:white; 
@@ -93,7 +93,7 @@
     .greeting{
         width:400px;
         position: relative;
-        top:6px;
+        top:10px;
         left:10px;
         color:white;
         text-align: left; 
@@ -139,7 +139,7 @@
 
     .toDoListDiv ul li{  
         border-top:1px solid rgb(170, 166, 166);
-        padding-bottom:7px;
+        padding-bottom:10px;
         padding-left:10px;
         width:calc(100% - 10px);
     }
