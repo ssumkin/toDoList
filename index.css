@@ -138,14 +138,14 @@
 
 
     .toDoListDiv ul li{  
-        border-top:1px solid rgb(170, 166, 166);
+        border-top:0.7px solid rgb(204, 197, 197);
         padding-bottom:10px;
         padding-left:10px;
         width:calc(100% - 10px);
     }
 
     .toDoListDiv ul li:nth-last-child(1) {  
-        border-bottom:1px solid rgb(170, 166, 166);
+        border-bottom:0.7px solid rgb(204, 197, 197);
     }
 
 
