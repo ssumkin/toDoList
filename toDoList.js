@@ -11,23 +11,18 @@ let toDos  = [];
  
 
 
-function changePage(){
-    onclick="location.href='details.html'"
-}
-
-
-
-
 function deleteToDo(event){
-    const btn = event.target;
-    const li = btn.parentNode;
-    toDoList.removeChild(li);
+    setTimeout(function(){
+        const btn = event.target;
+        const li = btn.parentNode;
+        toDoList.removeChild(li);
 
-    const cleanToDos = toDos.filter(function(toDo){
-        return toDo.id !== parseInt(li.id);
-    });
-    toDos = cleanToDos;
-    saveToDos();
+        const cleanToDos = toDos.filter(function(toDo){
+            return toDo.id !== parseInt(li.id);
+        });
+        toDos = cleanToDos;
+        saveToDos();
+    },500);
 }
 
 
@@ -42,7 +37,7 @@ function paintToDo(text){ // li, 버튼, span을 만들고 span에 form에서 �
     const span = document.createElement("span");
     const newID = toDos.length+1;
 
-    delBtn.innerText = "⭕"
+    delBtn.innerText = "✓"
     delBtn.addEventListener("click", deleteToDo);
     //delBtn.id = newID;
     span.innerText = ` ${text}`;

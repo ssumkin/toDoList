@@ -123,6 +123,8 @@
         overflow-y: scroll;
         background-color:white; 
     }
+
+    
      
 
     .writing{
@@ -179,15 +181,32 @@
         margin-bottom:120px;
     }
 
+    @keyframes fadeIn{
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+    
 
-    .toDoListDiv ul li button{
-        border:0px;
-        outline:none; 
+    .js-toDoList button{
+        width:17px;
+        height:17px;   
+        border-radius: 50%;
+        border:1.3px solid rgb(161, 153, 153);
+        background-color: white;
+        outline:none;
+        color:white;
     }
-     
-    .toDoListDiv ul li span{
-        font-weight: bold;
-    }
+
+
+    .js-toDoList button:focus{
+        background-color:rgb(165, 156, 156);
+        animation: fadeIn 0.4s linear;
+    } 
+      
 
     #footer{
         position: absolute;
