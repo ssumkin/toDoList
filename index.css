@@ -30,7 +30,7 @@
 
     #nameForm{
         position: absolute;
-        top:60px;
+        top:50px;
         width:100%;
         height: calc(100% - 40px);
         background-color: white;
@@ -64,7 +64,7 @@
 
     .form input{
         position: absolute;
-        top:60px;
+        top:50px;
         margin-left: calc(50% - 115px);
         width:230px;
         height:40px; 

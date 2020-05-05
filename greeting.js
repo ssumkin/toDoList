@@ -74,6 +74,7 @@ function menu(){
 
 function delteUser(){
     localStorage.removeItem(USER_LS)
+    location.reload();
 }
 
 
