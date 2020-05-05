@@ -15,7 +15,7 @@ function hideWriteToDo(){
 function showWriteToDo(){
     writeToDo.style.display = "block";
     blind.style.display = "block";
-    qwer.value = "";
+    qwer.value = "1234";
 }
 
 
