@@ -22,7 +22,7 @@ function deleteToDo(event){
         });
         toDos = cleanToDos;
         saveToDos();
-    },500);
+    },300);
 }
 
 
@@ -37,7 +37,7 @@ function paintToDo(text){ // li, 버튼, span을 만들고 span에 form에서 �
     const span = document.createElement("span");
     const newID = toDos.length+1;
 
-    delBtn.innerText = "✓"
+    delBtn.innerText = "X"
     delBtn.addEventListener("click", deleteToDo);
     //delBtn.id = newID;
     span.innerText = ` ${text}`;
@@ -62,7 +62,8 @@ function handleSubmit(event){ // form에 입력하면 paintToDo를 실행하고 
     if(currentInputValue !== ""){
         paintToDo(currentInputValue);
         toDoInput.value="";
-    }
+        document.querySelector("#writeToDo").style.display = "none";
+    } 
     
 }
 
