@@ -1,6 +1,7 @@
 const form = document.querySelector(".js-form"),
 input = form.querySelector("input"),
-greeting = document.querySelector(".js-greeting");
+greeting = document.querySelector(".js-greeting"),
+menuGreeting = document.querySelector(".menu-greeting");
 
 const name = document.getElementById("nameForm"),
 user = document.querySelector(".user"),
@@ -82,6 +83,7 @@ function delteUser(){
 function init(){ //처음 작동 함수 
     localName(); 
     greeting.addEventListener("click", menu);
+    menuGreeting.addEventListener("click", menu);
     delUser.addEventListener("click", delteUser);
 }
 
