@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css"> 
 </head>
 <body>
     
@@ -30,11 +30,17 @@
                 </form>
             </div>
 
+            <i class="fas fa-bars"></i>
             <h3 class="js-greeting greeting"></h3> 
             
             <div class="user">
-                <h3 class="menu-greeting"></h3> 
-                <button style="display:block; margin-top:20px; margin-left:10px; width:30px; height: 30px; border-radius: 50%;">X</button>
+                <div>
+                    <i class="fas fa-bars"></i>
+                    <h3 class="js-greeting greeting"></h3> 
+                </div>
+                <ul>
+                    <li style="padding:5px;">유저 삭제하기<button style="display:inline; margin-top:20px; margin-left:10px; width:30px; height: 30px; border-radius: 50%;">X</button></li>
+                </ul>
             </div>
         </div>
 
@@ -73,5 +79,6 @@
     <script src="toDoList.js"></script>
     <script src="background.js"></script>
     <script src="weather.js"></script>
+    <script src="https://kit.fontawesome.com/e7102622f2.js" crossorigin="anonymous"></script>
 </body>
 </html>
