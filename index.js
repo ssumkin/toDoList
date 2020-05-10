@@ -2,7 +2,7 @@ const writing = document.querySelector(".writing"),
 writeToDo = document.querySelector("#writeToDo"),
 blind = document.querySelector(".blind");
 
-var qwer = document.querySelector("#qwer");
+let qwer = document.querySelector("#qwer");
 
 
 function hideWriteToDo(){
@@ -14,7 +14,8 @@ function hideWriteToDo(){
 
 function showWriteToDo(){
     writeToDo.style.display = "block";
-    blind.style.display = "block"; 
+    blind.style.display = "block";
+    qwer.focus();
 }
 
 

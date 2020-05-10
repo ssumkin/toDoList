@@ -1,6 +1,4 @@
-document.write("<script src='index.js'></script>"); // 다른 js 파일 불러오는 법
  
-
 
 const form = document.querySelector(".js-form"),
 input = form.querySelector("input"),
