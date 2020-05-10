@@ -71,22 +71,7 @@ function paintToDo(text){ // li, 버튼, span을 만들고 span에 form에서 �
         id: newID
     }; 
 
-    
-
-    li.onclick = function(){
-        modifyToDo.style.display = "block";
-        modifyInput.value = toDos[li.id-1].text;
-        modifyForm.addEventListener("submit", function(event){ 
-            event.preventDefault(); 
-            if(modifyInput.value !== ""){
-                toDos[li.id-1].text = modifyInput.value;
-                saveToDos();
-                modifyToDo.style.display = "none";
-                modifyInput.value = "";
-                location.reload();
-            }
-        });
-    }
+    li.addEventListener("click", modify);
 
     toDos.push(toDoObj);
 
@@ -94,6 +79,22 @@ function paintToDo(text){ // li, 버튼, span을 만들고 span에 form에서 �
 }
 
 
+
+function modify(event){ 
+    const li = event.target;
+ 
+  
+    modifyToDo.style.display = "block";
+    modifyInput.value = toDos[li.id-1].text;
+    modifyForm.addEventListener("submit", function(){
+        event.preventDefault(); 
+        toDos[li.id-1].text = modifyInput.value; 
+        modifyToDo.style.display = "none";
+        modifyInput.value = ""; 
+        saveToDos();
+    });
+
+}
 
 
  
