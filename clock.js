@@ -11,7 +11,7 @@ function getTime(){
 
     //var windowWidth = window.innerWidth;
 
-    clockTitle.innerText = `${hours < 13 ?  `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}` //:${second < 10 ? `0${second}` : second }
+    clockTitle.innerText = `${hours < 10 ?  `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}` //:${second < 10 ? `0${second}` : second }
 
     // if(windowWidth > 500) {
     //     clockTitle.innerText = `${hours < 13 ?  `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}` //:${second < 10 ? `0${second}` : second }
