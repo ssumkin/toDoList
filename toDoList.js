@@ -1,6 +1,10 @@
 const toDoForm = document.querySelector(".js-toDoForm"),
 toDoInput = toDoForm.querySelector("input"),
-toDoList = document.querySelector(".js-toDoList");
+toDoList = document.querySelector(".js-toDoList"),
+modifyToDo = document.querySelector(".modifyToDo")
+modifyForm = document.querySelector(".js-modifyForm"),
+modifyInput = modifyToDo.querySelector("input");
+
 
 
 
@@ -35,25 +39,66 @@ function paintToDo(text){ // li, 버튼, span을 만들고 span에 form에서 �
     const li = document.createElement("li");
     const delBtn = document.createElement("button");
     const span = document.createElement("span");
+    const p = document.createElement("p");
+
+    const currentDate = new Date;
+    let month = currentDate.getMonth()+1;
+    let date = currentDate.getDate();
+
+
+    p.innerHTML = `${month}월 ${date}일`;
+    p.style.fontSize = "12px";
+    p.style.marginLeft = "28px";
+    p.style.color = "#DB4455";
+
     const newID = toDos.length+1;
 
-    delBtn.innerText = "X"
+    delBtn.innerHTML = `X`
     delBtn.addEventListener("click", deleteToDo);
     //delBtn.id = newID;
     span.innerText = ` ${text}`;
 
     li.appendChild(delBtn);
     li.appendChild(span);
+    li.appendChild(p)
     li.id = newID;
     toDoList.appendChild(li);  
+
+    
 
     const toDoObj = {
         text: text,
         id: newID
-    };
+    }; 
+
+    
+
+    li.onclick = function(){
+        modifyToDo.style.display = "block";
+        modifyInput.value = toDos[li.id-1].text;
+        modifyForm.addEventListener("submit", function(event){ 
+            event.preventDefault(); 
+            if(modifyInput.value !== ""){
+                toDos[li.id-1].text = modifyInput.value;
+                saveToDos();
+                modifyInput.value = "";
+                location.reload();
+            }
+        });
+    }
+
     toDos.push(toDoObj);
+
     saveToDos();
 }
+
+
+
+
+ 
+
+
+
 
 
 function handleSubmit(event){ // form에 입력하면 paintToDo를 실행하고 vlaue값을 지움
