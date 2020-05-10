@@ -81,6 +81,7 @@ function paintToDo(text){ // li, 버튼, span을 만들고 span에 form에서 �
             if(modifyInput.value !== ""){
                 toDos[li.id-1].text = modifyInput.value;
                 saveToDos();
+                modifyToDo.style.display = "none";
                 modifyInput.value = "";
                 location.reload();
             }
